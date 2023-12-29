@@ -53,4 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
     body.classList.toggle("dark-mode", this.checked);
     card.classList.toggle("dark-mode", this.checked);
   });
+
+
+  
 });
+
+
+

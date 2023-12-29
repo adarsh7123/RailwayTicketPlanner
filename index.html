@@ -7,72 +7,9 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <style>
-      body {
-        /* background-image: url("./assets/konstantin-planinski-Aw2FSwNsb4M-unsplash.jpg"); */
-         /* Add the path to your background image */
-        background-color: #370a59;
-        /* background-size: cover; */
-        /* transition: background-color 0.3s ease; */
-      }
-      .card {
-        background-color: #ededee;
-        position: relative;
-      }
-      .dark-mode .card {
-        background-color: #2d3748; /* Dark mode background color */
-        color: #cbd5e0; /* Dark mode text color */
-      }
-      .datepicker {
-        /* Add custom styling for the date picker */
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 0.25rem;
-        background-color: #fff;
-        color: #333;
-      }
-      .toggle-switch {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        display: inline-block;
-        width: 60px;
-        height: 34px;
-      }
-      .toggle-switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-      }
-      .toggle-slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        transition: 0.4s;
-        border-radius: 34px;
-      }
-      .toggle-slider:before {
-        position: absolute;
-        content: "";
-        height: 26px;
-        width: 26px;
-        left: 4px;
-        bottom: 4px;
-        background-color: white;
-        transition: 0.4s;
-        border-radius: 50%;
-      }
-      input:checked + .toggle-slider {
-        background-color: #2196f3;
-      }
-      input:checked + .toggle-slider:before {
-        transform: translateX(26px);
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
+    
     <title>RailwayTicketPlanner</title>
   </head>
   <body class=" p-8">
