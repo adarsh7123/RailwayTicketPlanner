@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        /* background-image: url("./assets/konstantin-planinski-Aw2FSwNsb4M-unsplash.jpg"); */
+         /* Add the path to your background image */
+        background-color: #370a59;
+        /* background-size: cover; */
+        /* transition: background-color 0.3s ease; */
+      }
+      .card {
+        background-color: #ededee;
+        position: relative;
+      }
+      .dark-mode .card {
+        background-color: #2d3748; /* Dark mode background color */
+        color: #cbd5e0; /* Dark mode text color */
+      }
+      .datepicker {
+        /* Add custom styling for the date picker */
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        background-color: #fff;
+        color: #333;
+      }
+      .toggle-switch {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .toggle-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 34px;
+      }
+      .toggle-slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+      input:checked + .toggle-slider {
+        background-color: #2196f3;
+      }
+      input:checked + .toggle-slider:before {
+        transform: translateX(26px);
+      }
+    </style>
+    <title>RailwayTicketPlanner</title>
+  </head>
+  <body class=" p-8">
+    <div class="max-w-md mx-auto card p-8 rounded shadow-md  ">
+      <div class="toggle-switch">
+        <input type="checkbox" id="darkModeToggle" />
+        <label class="toggle-slider" for="darkModeToggle"></label>
+      </div>
+
+      <h1 class="text-2xl font-semibold mb-4 text-center text-indigo-500">
+        Railway Booking Information
+      </h1>
+      <h2 class="text-xl font-semibold mb-4 text-center text-indigo-500">
+        120 Day's Calculator
+      </h2>
+
+      <!-- Today's Booking Date -->
+      <div>
+        <h2 class="text-lg font-medium mb-2">
+          Today you can book tickets for the journey date till
+        </h2>
+        <!-- today which journey date counter open -->
+        <span
+          id="todayBookingDate"
+          class="text-gray-700 text-lg font-semibold bg-yellow-300 p-2 rounded justify-center items-center"
+        ></span>
+      </div>
+
+      <!-- Journey Date Selection -->
+      <div class="mt-6">
+        <label for="journeyDate" class="block text-sm font-medium "
+          >Select Your Journey Date:</label
+        >
+        <input type="date" id="journeyDate" class="mt-1 datepicker w-full" />
+      </div>
+
+      <!-- Display Booking Date for Selected Journey Date -->
+      <div class="mt-6">
+        <h4 class=" font-medium mb-2">
+          Booking Opens For Your Selected Journey Date on:
+        </h4>
+        <!-- selected journey date booking open date here display  -->
+        <span
+          id="selectedBookingDate"
+          class="text-gray-700 text-lg font-semibold text-indigo-500 p-2 rounded"
+        ></span>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
