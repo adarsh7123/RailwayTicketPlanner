@@ -1,6 +1,6 @@
-# Railway Ticket Planner Web App
+# Indian Railway Ticket Planner Web App
 
-Welcome to the Railway Ticket Planner web application! This project aims to provide users with information about the opening dates for booking railway tickets. Users can select their journey date, and the application will display the corresponding booking opening date.
+Welcome to the Indian Railway Ticket Planner web application! This project aims to provide users with information about the opening dates for booking Indian railway tickets. Users can select their journey date, and the application will display the corresponding booking opening date.
 
 ## Features
 
